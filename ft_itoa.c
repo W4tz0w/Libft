@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
+/*   By: egiovann <egiovann@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:00:12 by daddy_cool        #+#    #+#             */
-/*   Updated: 2022/12/23 18:47:25 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/01/03 21:05:31 by egiovann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 char	*ft_itoa(int n)
 {
-	char		buf[12];
+	char				buf[12];
 	unsigned long long	i;
-	const int	neg = n < 0;
+	const int			neg = n < 0;
 
 	if (neg == 0)
 		n = -n;

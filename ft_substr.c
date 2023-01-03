@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
+/*   By: egiovann <egiovann@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 20:15:48 by daddy_cool        #+#    #+#             */
-/*   Updated: 2022/12/23 18:50:38 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/01/03 21:08:53 by egiovann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int		main(void)
 // {
 // 	char	*s;
-	 
 // 	s = "Mange ma bite";
 // 	printf("Mon ft : %s\n", ft_substr(s, 0, 13));
 // 	// printf("Original ft : %d", substr(s, 0, 15));
