@@ -6,7 +6,7 @@
 /*   By: egiovann <egiovann@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 20:15:48 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/01/03 21:08:53 by egiovann         ###   ########.fr       */
+/*   Updated: 2023/01/04 22:56:44 by egiovann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char		*sub;
 	size_t		srclen;
 
-	if (len == 0 || !s)
+	if (!s)
 		return (NULL);
 	srclen = ft_strlen(s);
+	if (start > srclen)
+		return ((char *)ft_calloc(1, 1));
 	i = 0;
 	while (s[start + i] && i < len && (start + i < srclen))
 		i++;
