@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: egiovann <egiovann@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 00:02:42 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/01/12 18:28:27 by egiovann         ###   ########.fr       */
+/*   Created: 2022/12/16 03:39:23 by daddy_cool        #+#    #+#             */
+/*   Updated: 2023/01/12 18:30:21 by egiovann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	len;
-	char	*str;
+	t_list	*lst;
 
-	if (!s1 || !set)
-		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
-		len--;
-	str = ft_substr((char *)s1, 0, len + 1);
-	return (str);
+	lst = malloc(sizeof(t_list));
+	if (!lst)
+		return (0);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }
-
-// int main()
-// {
-// 	printf("%s\n", ft_strtrim("abcdefgh", "abcfgh"));
-// 	return (1);
-// }
