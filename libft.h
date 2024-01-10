@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: egiovann <egiovann@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 23:10:20 by egiovann          #+#    #+#             */
-/*   Updated: 2023/01/12 18:28:31 by egiovann         ###   ########.fr       */
+/*   Updated: 2024/01/10 17:46:03 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -23,6 +26,17 @@ typedef struct s_list
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_bzero(void *s, int n);
 void	*ft_calloc(size_t nitems, size_t size);
+int		ft_argument_c(char c);
+int		ft_arguments_d_i(int c);
+int		ft_argument_p(unsigned long address);
+int		ft_argument_percent(void);
+int		ft_argument_s(char *str);
+int		ft_argument_u(unsigned int nbr);
+int		ft_arguments_x(unsigned int nbr, char type);
+char	ft_decimal_converter_to_hex(char digit, char type);
+int		ft_decimal_length(long int nbr);
+void	ft_free_ptr(char **ptr);
+int 	ft_hex_length(unsigned long nbr);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isalpha(char c);
@@ -57,6 +71,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_print_reversed_str(char *str);
+int		ft_printf(const char *str, ...);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
